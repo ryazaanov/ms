@@ -1,4 +1,4 @@
-﻿# Вы можете расположить сценарий своей игры в этом файле.
+# Вы можете расположить сценарий своей игры в этом файле.
 
 # Определение персонажей игры.
 define a = Character('Аня', color = '#000000')
@@ -43,7 +43,7 @@ label prologue:
         frame:
             xalign 0.9 xpos 50
             button:
-                action Jump(home) #я не помню, как правильно джамп из кнопки делать
+                action Jump("home") #я не помню, как правильно джамп из кнопки делать
                 text "Пропустить"
     show anna angry at center with vpunch
     a "{size = +40}Артёёёёёёёёёёём!{/size}"
@@ -65,7 +65,7 @@ label prologue:
     show sausage awsmile "Вот именно, всего разок, Аня!"
     show anna surprised
     a "А что делают презервативы на полу?"
-    #play sadmusic.mp3
+    play music "sadmusic.mp3" #грустная музыка
     show anna surpsad
     show anna shok
     a "{csp = *.5}Только не говорите, что вы...{/csp}"
@@ -80,7 +80,8 @@ label prologue:
     m confounded "Аня, прости."
     show anna sad
     a "*молчит*"
-    m confounded "Мы с Никитой очень давно..." #тут надо сделать резкий обрыв, чтобы после того, как пропечаталось, начала сразу говорить Аня.
+    #config.default_text_cps = 2 возможно - это вообще не нужно
+    m confounded "Мы с Никитой очень давно... {nw}" #обрыв
     a "Артём, не продолжай."
     a "Можешь не возвращаться домой."
     a "Я привезу твои вещи завтра."
@@ -88,7 +89,7 @@ label prologue:
     m csweat "Аня..."
     hide anna with moveinleft
     scene bg black with dissolve(2.5)
-
+    stop music fadeout 0.5 #вот тут наверное надо остановить грустную песню
 
 label home:
     scene bg black
