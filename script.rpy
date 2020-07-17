@@ -94,6 +94,7 @@ label prologue:
     m csweat "Аня..."
     hide anna with moveinleft
     scene bg black with Dissolve(2.5)
+    stop music with fadeout 0.5
 
 
 label morning:
