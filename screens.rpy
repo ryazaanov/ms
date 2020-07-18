@@ -166,7 +166,7 @@ style say_dialogue:
 ############################
 #######диалоговое окно намба ту
 screen say_side(who, what):
-    style_prefix "say"
+    style_prefix "sayside"
 
     window:
         #id "window"
@@ -185,12 +185,16 @@ screen say_side(who, what):
     ## По стандарту не показывается на варианте для мобильных устройств — мало
     ## места.
     if not renpy.variant("small"):
-        add SideImage() xalign 0.0 yalign 1.0
-
+        add "gui/back_side_frame.png" xpos 76 ypos 612
+        add SideImage() xpos 107 ypos 721
+        add "gui/front_side_frame.png" xpos 76 ypos 612
 
 ## Делает namebox доступным для стилизации через объект Character.
 init python:
     config.character_id_prefixes.append('namebox')
+
+
+
 #######################################
 screen say_island_side(who, what):
     style_prefix "say"
@@ -873,7 +877,7 @@ screen preferences():
                                 textbutton _("Тест") action Play("sound", config.sample_sound)
 
 
-                    
+
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
 
@@ -1513,7 +1517,7 @@ screen quick_menu():
             textbutton _("Пропуск") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Авто") action Preference("auto-forward", "toggle")
             textbutton _("Меню") action ShowMenu()
-
+            #textbutton _("Б.Сохр.") action
 
 style window:
     variant "small"
