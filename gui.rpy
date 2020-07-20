@@ -33,12 +33,12 @@ define gui.idle_color = '#aaaaaa'
 define gui.idle_small_color = '#888888'
 
 ## Цвет, используемых в кнопках и панелях, когда они наведены.
-define gui.hover_color = '#cc0066'
+define gui.hover_color = '#1b1b1b'
 
 ## Цвет, используемый текстовой кнопкой, когда она выбрана, но не наведена.
 ## Кнопка может быть выбрана, если это текущий экран или текущее значение
 ## настройки.
-define gui.selected_color = '#555555'
+define gui.selected_color = '#1b1b1b'
 
 ## Цвет, используемый текстовой кнопкой, когда она не может быть выбрана.
 define gui.insensitive_color = '#aaaaaa7f'
@@ -56,13 +56,13 @@ define gui.interface_text_color = '#404040'
 ## Шрифты и их размеры #########################################################
 
 ## Шрифт, используемый внутриигровым текстом.
-define gui.text_font = "gui/fonts/Caveat Regular.ttf"
+define gui.text_font = "gui/fonts/Lis.ttf"
 
 ## Шрифт, используемый именами персонажей.
-define gui.name_text_font = "gui/fonts/Caveat Bold.ttf"
+define gui.name_text_font = "gui/fonts/Lis.ttf"
 
 ## Шрифт, используемый текстом вне игры.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "gui/fonts/Comfortaa-Regular_1.ttf"
 
 ## Размер нормального текста диалога.
 define gui.text_size = 42
@@ -106,8 +106,8 @@ define gui.textbox_yalign = 1.0
 ## Это могут быть целые значения в пикселях слева и сверху от начала окна или
 ## процентное отношение, например, 0.5 для центрирования.
 define gui.name_xpos = 200
-define gui.name_ypos = 10
-
+define gui.name_ypos = 20
+define gui.name2_xpos = 400
 ## Горизонтальное выравнивание имени персонажа. Это может быть 0.0 для
 ## левоориентированного, 0.5 для центрированного и 1.0 для правоориентированного
 ## выравнивания.
@@ -131,7 +131,7 @@ define gui.namebox_tile = False
 ## значения в пикселях слева и сверху от текстового окна или процентное
 ## отношение, например, 0.5 для центрирования.
 define gui.dialogue_xpos = 240
-define gui.dialogue_ypos = 75
+define gui.dialogue_ypos = 100
 
 
 ## Максимальная ширина текста диалога в пикселях.
